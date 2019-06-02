@@ -7,13 +7,13 @@ In the project directory, you can run:
 Runs the app in the development mode.<br>
 App runs in [http://localhost:3001](http://localhost:3001)
 
-The endpoints are:
+### `npm test`
+
+## Endpoints
 
 - **GET /balance/:address** : Returns the balance in dai and the total amount of USD in tokens for a given address
 
-### `npm test`
-
-### Deployment
+## Deployment
 
 The app was deployed with Heroku and runs in https://balance-checker-back.herokuapp.com
 
