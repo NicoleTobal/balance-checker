@@ -1,0 +1,67 @@
+.App {
+  background-color: #f5f4f4;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-size: 17px;
+  color: black;
+}
+
+.header {
+  margin: 30px;
+  text-align: end;
+  margin-right: 200px;
+}
+
+.body {
+  text-align: center;
+  width: 30%;
+  margin: 0 auto;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.box {
+  background-color: white;
+  box-shadow: 1px 1px 4px 1px #88888857;
+  border-radius: 5px;
+  padding: 10px 30px 10px 30px;
+  margin: 20px 0px 20px;
+  min-width: 300px;
+}
+
+.row {
+  margin: 10px;
+}
+
+.table {
+  display: table;
+  border: 1px solid #ede8e8;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+.cell {
+  display: table-cell;
+  padding: 5px 5px 5px 5px;
+}
+
+.first.cell {
+  border-right: 1px solid #ede8e8;
+  width: 30px;
+}
+
+.middle.cell {
+  min-width: 200px;
+  text-align: left;
+}
+
+.last.cell {
+  border-left: 1px solid #ede8e8;
+}
+
+.last.cell.money {
+  border-left: none;
+}

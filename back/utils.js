@@ -5,13 +5,15 @@ const etherValueInWei = 1000000000000000000;
 
 const parseTokens = tokens => {
   let dai = 0;
-  let totalUSD = 0; 
-  tokens.forEach(token => {
-    const tokenAmountInEthers = BigNumber(token.balance).dividedBy(etherValueInWei).toFixed();
-    const tokenAmount = parseFloat(tokenAmountInEthers);
-    if (token.tokenInfo.symbol === 'DAI') dai = tokenAmount;
-    if (token.tokenInfo.price.rate) totalUSD += token.tokenInfo.price.rate * tokenAmount;
-  })
+  let totalUSD = 0;
+  if (tokens) {
+    tokens.forEach(token => {
+      const tokenAmountInEthers = BigNumber(token.balance).dividedBy(etherValueInWei).toFixed();
+      const tokenAmount = parseFloat(tokenAmountInEthers);
+      if (token.tokenInfo.symbol === 'DAI') dai = tokenAmount;
+      if (token.tokenInfo.price.rate) totalUSD += token.tokenInfo.price.rate * tokenAmount;
+    })
+  }
   return { dai, totalUSD };
 }
 

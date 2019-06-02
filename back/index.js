@@ -1,7 +1,10 @@
 const express = require('express');
+const cors = require('cors');
 const { getBalance } = require('./utils');
 
 const app = express();
+
+app.use(cors({ origin: "*" }));
 
 /**
   * @api {get} /balance/:address Returns an address's balance  
@@ -13,14 +16,13 @@ app.get('/balance/:address', async (request, reply) => {
     const balances = await getBalance(address);
     reply.status(200).send(balances);
   } catch (err) {
-    console.log(err);
     reply.status(500).send(err);
   }
 });
 
-app.listen(3000, async (err) => {
+app.listen(3001, async (err) => {
   if (err) {
     throw err;
   }
-  console.log('App listening on port 3000');
+  console.log('App listening on port 3001');
 })
