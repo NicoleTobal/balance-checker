@@ -7,7 +7,10 @@ export const getAddress = async () => {
   } else {
     return;
   }
-  await window.ethereum.enable();
+  const authorization = await window.ethereum.enable();
+  if (!authorization) {
+    return;
+  }
   const accounts =await web3.eth.getAccounts();
   const account = accounts[0];
   const balance = await web3.eth.getBalance(account);
