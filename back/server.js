@@ -2,6 +2,8 @@ const express = require('express');
 const cors = require('cors');
 const { getBalance } = require('./utils');
 
+const port = process.env.PORT || 3001;
+
 const app = express();
 
 app.use(cors({ origin: "*" }));
@@ -20,9 +22,9 @@ app.get('/balance/:address', async (request, reply) => {
   }
 });
 
-app.listen(3001, async (err) => {
+app.listen(port, async (err) => {
   if (err) {
     throw err;
   }
-  console.log('App listening on port 3001');
+  console.log('App listening on port ', port);
 })
