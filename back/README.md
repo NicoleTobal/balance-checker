@@ -9,6 +9,8 @@ App runs in [http://localhost:3001](http://localhost:3001)
 
 ### `npm test`
 
+Runs the tests
+
 ## Endpoints
 
 - **GET /balance/:address** : Returns the balance in dai and the total amount of USD in tokens for a given address
