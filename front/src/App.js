@@ -17,13 +17,13 @@ class App extends Component {
   }
 
   componentDidMount() {
-    getAddress().then((result) => {
+    getAddress().then(result => {
       if (!result) {
         return this.setState({ showMetamaskMessage: true });
       }
       const { account, balance } = result;
       this.setState({ address: account, ethBalance: balance });
-    });
+    }).catch(err => console.log(err));
   }
 
   render() {

@@ -28,5 +28,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "enzyme": "3.9.0",
+    "enzyme-adapter-react-16": "1.13.2",
+    "enzyme-async-helpers": "0.9.1",
+    "ganache-cli": "6.4.3",
+    "nock": "10.0.6"
   }
 }
